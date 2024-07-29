@@ -28,6 +28,11 @@ public class DemoConsumerApplication {
             return new RestTemplate();
         }
 
+        @Bean
+        public RestTemplate restTemplate2() {
+            return new RestTemplate();
+        }
+
     }
 
     @RestController
@@ -35,6 +40,9 @@ public class DemoConsumerApplication {
 
         @Autowired
         private RestTemplate restTemplate;
+
+        @Autowired
+        private RestTemplate restTemplate2;
         @Autowired
         private LoadBalancerClient loadBalancerClient;
 
@@ -44,7 +52,7 @@ public class DemoConsumerApplication {
             ServiceInstance instance = loadBalancerClient.choose("demo-provider");
             // 发起调用
             String targetUrl = instance.getUri() + "/echo?name=" + name;
-            String response = restTemplate.getForObject(targetUrl, String.class);
+            String response = restTemplate2.getForObject(targetUrl, String.class);
             // 返回结果
             return "consumer:" + response;
         }
