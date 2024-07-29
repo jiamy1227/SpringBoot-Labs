@@ -16,7 +16,7 @@ spring:
         ds1:
           # 对应 DataSourcePropertiesConfiguration 类
           nacos:
-            server-addr: 127.0.0.1:8848 # Nacos 服务器地址
+            server-addr: 47.102.124.178:8848 # Nacos 服务器地址
 #            data-id: demo-application-flow-rule
 #            data-id: demo-provider-flow-rule
             namespace: # Nacos 命名空间

@@ -26,7 +26,7 @@ public class SentinelConfiguration {
     @Bean
     public NacosDataSource nacosDataSource(ObjectMapper objectMapper) {
         // Nacos 配置。这里先写死，推荐后面写到 application.yaml 配置文件中。
-        String serverAddress = "127.0.0.1:8848"; // Nacos 服务器地址
+        String serverAddress = "47.102.124.178:8848"; // Nacos 服务器地址
         String namespace = ""; // Nacos 命名空间
         String dataId = "demo-application-flow-rule"; // Nacos 配置集编号
 //        String dataId = "example-sentinel"; // Nacos 配置集编号

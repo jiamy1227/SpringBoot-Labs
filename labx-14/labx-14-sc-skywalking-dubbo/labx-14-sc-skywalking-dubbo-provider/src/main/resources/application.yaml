@@ -13,7 +13,7 @@ dubbo:
       port: -1 # 协议端口，-1 表示自增端口，从 20880 开始
   # Dubbo 服务注册中心配置，对应 RegistryConfig 类
   registry:
-    address: spring-cloud://127.0.0.1:8848 # 指定 Dubbo 服务注册中心的地址
+    address: spring-cloud://47.102.124.178:8848 # 指定 Dubbo 服务注册中心的地址
   # Spring Cloud Alibaba Dubbo 专属配置项，对应 DubboCloudProperties 类
   cloud:
     subscribed-services: '' # 设置订阅的应用列表，默认为 * 订阅所有应用。
