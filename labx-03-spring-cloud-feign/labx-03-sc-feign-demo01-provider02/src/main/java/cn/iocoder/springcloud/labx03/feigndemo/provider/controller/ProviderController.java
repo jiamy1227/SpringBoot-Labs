@@ -17,9 +17,6 @@ public class ProviderController {
 
     @GetMapping("/echo")
     public String echo(String name) throws InterruptedException {
-        // 模拟执行 100ms 时长。方便后续我们测试请求超时
-        Thread.sleep(100L);
-
         // 记录被调用的日志
         logger.info("[echo][被调用啦 name({})]", name);
 
