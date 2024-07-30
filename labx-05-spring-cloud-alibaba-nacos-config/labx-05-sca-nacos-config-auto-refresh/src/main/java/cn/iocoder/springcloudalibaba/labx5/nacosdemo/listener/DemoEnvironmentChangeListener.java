@@ -13,7 +13,6 @@ public class DemoEnvironmentChangeListener implements ApplicationListener<Enviro
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Autowired
     private ConfigurableEnvironment environment;
 
     @Override
